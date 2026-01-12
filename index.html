@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema JL Equipamentos</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="icon" href="img_jl_logo.jpg">
+    <link rel="stylesheet" href="style.css?v=6">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <div class="logo-print">
+        <img src="img_jl_logo.jpg" alt="JL Equipamentos">
+    </div>
+
     <header class="app-bar">
         <div class="header-info">
-            <h1>JL EQUIPAMENTOS</h1>
-            <p>João Pessoa - PB</p>
+            <img src="img_jl_logo.jpg" alt="Logo" class="logo-header">
+            <div>
+                <h1>JL EQUIPAMENTOS</h1>
+                <p>João Pessoa - PB </p>
+            </div>
         </div>
     </header>
 
@@ -21,7 +29,17 @@
             <div class="card config-card">
                 <div class="card-header"><span class="material-icons">person</span> Cliente & Entrega</div>
                 <input type="text" id="nomeCliente" placeholder="Nome do Cliente" oninput="salvarProgresso()">
-                <input type="text" id="enderecoEntrega" placeholder="Endereço de Entrega" oninput="salvarProgresso()">
+                
+                <div class="input-group-mapa">
+                    <input type="text" id="enderecoEntrega" placeholder="Endereço de Entrega" oninput="salvarProgresso()">
+                    <button onclick="abrirMapa()" class="btn-mapa google" title="Abrir no Google Maps">
+                        <span class="material-icons">map</span>
+                    </button>
+                    <button onclick="abrirWaze()" class="btn-mapa waze" title="Abrir no Waze">
+                        <span class="material-icons">directions_car</span>
+                    </button>
+                </div>
+
                 <div class="row">
                     <div class="col">
                         <label>Material:</label>
@@ -139,7 +157,7 @@
                 
                 <div class="row">
                     <div class="col"><label>Pagamento:</label><input type="text" id="formaPagamento" placeholder="Ex: Pix" oninput="salvarProgresso()"></div>
-                    <div class="col"><label>Previsão:</label><input type="text" id="prazoEntrega" placeholder="Ex: 7 dias" oninput="salvarProgresso()"></div>
+                    <div class="col"><label>Previsão:</label><input type="text" id="prazoEntrega" placeholder="Ex: 30 dias" oninput="salvarProgresso()"></div>
                 </div>
 
                 <div class="box-preco-final">
@@ -174,6 +192,6 @@
             <p>1. Validade: 5 dias. 2. Garantia de 90 dias na fabricação. 3. Frete calculado por consumo de combustível.</p>
         </div>
     </div>
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=6"></script>
 </body>
 </html>

@@ -31,6 +31,24 @@ function salvarProgresso() {
     localStorage.setItem('jl_orcamento_temp', JSON.stringify(dados));
 }
 
+function abrirMapa() {
+    let endereco = document.getElementById("enderecoEntrega").value;
+    if (endereco) {
+        window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`, '_blank');
+    } else {
+        alert("Por favor, digite um endereço primeiro.");
+    }
+}
+
+function abrirWaze() {
+    let endereco = document.getElementById("enderecoEntrega").value;
+    if (endereco) {
+        window.open(`https://waze.com/ul?q=${encodeURIComponent(endereco)}`, '_blank');
+    } else {
+        alert("Por favor, digite um endereço primeiro.");
+    }
+}
+
 function adicionarChapa() {
     let mat = document.getElementById("tipoMaterial").value;
     let precoKg = parseFloat(document.getElementById("precoKg").value);

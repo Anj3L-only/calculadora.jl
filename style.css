@@ -1,65 +1,53 @@
 * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
 body { margin: 0; background-color: #f0f2f5; padding-bottom: 50px; }
-
-/* CABEÇALHO */
 .app-bar { background-color: #0056b3; color: white; padding: 15px; border-radius: 0 0 15px 15px; margin-bottom: 20px; }
 .header-info { display: flex; align-items: center; justify-content: center; gap: 15px; }
 .logo-header { height: 60px; border-radius: 6px; border: 2px solid rgba(255,255,255,0.3); }
 .meta-orcamento { background: rgba(0,0,0,0.2); padding: 5px 10px; border-radius: 4px; font-size: 12px; margin-top: 5px; display: inline-block; }
 
-/* LAYOUT */
 .layout-principal { display: grid; grid-template-columns: 1fr 380px; gap: 20px; padding: 0 20px; max-width: 1300px; margin: 0 auto; }
 .card { background: white; padding: 15px; border-radius: 10px; border: 1px solid #ddd; margin-bottom: 15px; }
 .card-header { font-weight: bold; color: #0056b3; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
 
-/* INPUTS E BOTÕES */
-input, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 5px; font-size: 14px; }
+input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 5px; font-size: 14px; }
 label { font-size: 11px; font-weight: bold; color: #555; }
 .row { display: flex; gap: 10px; }
 .col { flex: 1; }
 
-button { cursor: pointer; border: none; border-radius: 6px; font-weight: bold; color: white; padding: 10px; transition: 0.2s; }
-.btn-add { background: #0056b3; width: 100%; margin-top: 5px; }
+button { cursor: pointer; border: none; border-radius: 6px; font-weight: bold; color: white; padding: 10px; transition: 0.2s; width: 100%; margin-top:5px; }
+.btn-add { background: #0056b3; }
 .btn-add:hover { background: #004494; }
 .btn-add.dark { background: #34495e; }
 .btn-add.orange { background: #d35400; }
-.btn-reset { background: #e74c3c; width: 100%; margin-top: 10px; }
-.btn-del { background: #fee; color: red; padding: 2px 8px; }
+.btn-reset { background: #e74c3c; margin-top: 10px; }
+.btn-del { background: #fee; color: red; padding: 2px 8px; width: auto; margin:0; }
 
-/* MAPAS E BUSCA */
 .input-group-mapa { display: flex; gap: 5px; align-items: center; margin-bottom: 8px; }
 .input-group-mapa input { margin-bottom: 0; }
-.btn-mapa { padding: 8px; display: flex; align-items: center; justify-content: center; width: 45px; }
+.btn-mapa { padding: 8px; width: 45px; margin-top:0; }
 .btn-mapa.google { background: #4285F4; }
 .btn-mapa.waze { background: #33CCFF; }
 #buscaMaterial { border: 2px solid #e1e8ed; background-color: #fcfcfc; font-weight: bold; }
-#buscaMaterial:focus { border-color: #0056b3; outline: none; }
 
-/* HISTÓRICO */
 .historico-card { border-left: 4px solid #34495e; background: #fdfdfd; }
 .lista-historico { max-height: 150px; overflow-y: auto; margin-top: 5px; border: 1px solid #eee; border-radius: 4px; }
 .item-hist { padding: 8px; border-bottom: 1px solid #eee; cursor: pointer; background: #fff; }
 .item-hist:hover { background: #eef7ff; }
 
-/* RESUMO E PESO */
 .tabela-container { max-height: 200px; overflow-y: auto; font-size: 12px; }
 table { width: 100%; border-collapse: collapse; }
 td { padding: 5px 0; border-bottom: 1px solid #eee; }
-.info-peso { background: #f0f7ff; color: #0056b3; padding: 8px; border-radius: 6px; font-size: 13px; margin-top: 5px; display: flex; align-items: center; gap: 5px; }
+.info-peso { background: #f0f7ff; color: #0056b3; padding: 8px; border-radius: 6px; font-size: 13px; margin-top: 5px; }
 
-/* FINANCEIRO */
+/* ESTILO DO FRETE E FECHAMENTO */
 .frete-box { background: #f8fbff; border: 1px solid #cce5ff; padding: 10px; border-radius: 8px; margin: 10px 0; }
 .box-preco-final { background: #28a745; color: white; padding: 15px; text-align: center; border-radius: 10px; margin-top: 10px; }
-.box-grafico { height: 200px; margin: 15px 0; }
-
-/* EXPORTAÇÃO E RODAPÉ */
-.titulo-export { font-size: 11px; font-weight: bold; color: #666; margin-bottom: 5px; text-transform: uppercase; }
-.grid-botoes { display: flex; gap: 5px; margin-bottom: 5px; }
+.box-grafico { height: 180px; margin: 15px 0; }
+.grid-botoes { display: flex; gap: 5px; margin-top: 10px; }
 .btn-zap { flex: 1; background: #25D366; }
 .btn-print { flex: 1; background: #555; }
-.btn-print.dark { background: #34495e; }
 .btn-excel { flex: 1; background: #1d6f42; }
-.footer-termos { margin-top: 20px; padding: 15px; border-top: 2px solid #ddd; font-size: 11px; color: #666; }
+
 .logo-print { display: none; text-align: center; margin-bottom: 20px; }
 .logo-print img { height: 80px; filter: grayscale(100%); }
 
@@ -68,6 +56,5 @@ td { padding: 5px 0; border-bottom: 1px solid #eee; }
     .painel-ferramentas, .grid-botoes, button, .btn-reset, input[type=range], .app-bar { display: none !important; }
     .layout-principal { display: block; padding: 0; }
     .logo-print { display: block; }
-    body.print-client #custoProducao, body.print-client #lucroLiquido, body.print-client .custo-detalhe, 
-    body.print-client .frete-box, body.print-client .box-grafico { display: none !important; }
+    body.print-client #custoProducao, body.print-client #lucroLiquido, body.print-client .frete-box, body.print-client .box-grafico { display: none !important; }
 }

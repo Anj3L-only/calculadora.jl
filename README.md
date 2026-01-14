@@ -1,10 +1,10 @@
-# JL Sistemas - ERP Industrial
+# Sistema JL Sistemas - ERP Industrial
 
 ![Versão](https://img.shields.io/badge/version-22.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 ![Licença](https://img.shields.io/badge/license-Private-red.svg)
 
-Sistema web de gestão e orçamentos industriais desenvolvido sob medida para a **Equipamentos JL**.
+Sistema web de gestão e orçamentos industriais desenvolvido sob medida para a **JL Equipamentos**.
 A plataforma automatiza o cálculo de materiais (Aço Inox, Carbono, Alumínio), precificação de serviços de solda e geração de propostas comerciais instantâneas integradas ao WhatsApp.
 
 ---------------------
